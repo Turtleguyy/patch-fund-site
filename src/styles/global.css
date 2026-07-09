@@ -6,6 +6,7 @@
   --color-text: #1c1c1a;
   --color-text-muted: #6f6f66;
   --color-accent: #db2777;
+  --color-accent-dark: #be185d;
   --color-accent-light: #fdf2f8;
   --color-positive: #15803d;
   --radius-md: 14px;
@@ -49,6 +50,11 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+a,
+button {
+  cursor: pointer;
 }
 
 a {
@@ -259,12 +265,23 @@ li + li {
   font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.button[aria-disabled='true'] {
   cursor: default;
 }
 
 .button--primary {
   background: var(--color-accent);
   color: #fff;
+}
+
+.button--primary:not([aria-disabled='true']):hover {
+  background: var(--color-accent-dark);
 }
 
 .button--secondary {
@@ -332,6 +349,10 @@ li + li {
 }
 
 .steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.6rem;
+  align-items: start;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -346,12 +367,24 @@ li + li {
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
-  margin-bottom: 0.75rem;
   border-radius: 999px;
   background: var(--color-accent-light);
   color: var(--color-accent);
   font-size: 0.85rem;
   font-weight: 700;
+}
+
+.steps li strong {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.steps li p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 .legal-page {
