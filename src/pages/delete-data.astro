@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+
+const deletionEmail = `mailto:${site.contactEmail}?subject=${encodeURIComponent('Patch Fund account deletion request')}&body=${encodeURIComponent(
+  'Please delete my Patch Fund account and associated cloud data.\n\nSign-in email (if known):\n\nApple or Google sign-in:\n\nHousehold invite code (if known):\n\nAdditional notes:\n',
+)}`;
+---
+
+<BaseLayout
+  title="Delete your data"
+  description="How to delete your Patch Fund account and personal data."
+  currentPath="/delete-data"
+>
+  <article class="legal-page">
+    <div class="container container--narrow">
+      <h1>Delete your data</h1>
+      <p class="legal-page__meta">
+        Last updated: {site.lastUpdated}<br />
+        {site.company} operates Patch Fund. This page explains how to delete your information.
+      </p>
+
+      <p>
+        How you delete data depends on whether you use Patch Fund in <strong>local-only mode</strong>
+        (no sign-in) or with <strong>household sync</strong> (signed in with Apple or Google).
+      </p>
+
+      <h2>Local-only mode (no account)</h2>
+      <p>If you have not signed in to Patch Fund, your allowance data is stored only on your device.</p>
+      <p>To delete it:</p>
+      <ol>
+        <li>Delete individual children, entries, or weeks inside the app, or</li>
+        <li>
+          Remove the app from your iPhone (<strong>Settings → General → iPhone Storage → Patch Fund
+          → Delete App</strong>), or
+        </li>
+        <li>
+          Offload or delete app data through iOS storage settings.
+        </li>
+      </ol>
+      <p>
+        We do not have access to local-only data and cannot delete it for you. Uninstalling the app
+        removes the data from that device.
+      </p>
+
+      <h2>Household sync (signed in)</h2>
+      <p>
+        If you signed in with Apple or Google, your profile and household membership are stored in our
+        cloud backend. You can delete individual children, entries, and week summaries inside the app,
+        but that does not delete your account.
+      </p>
+
+      <h3>Request account deletion</h3>
+      <p>To delete your cloud account and personal data, email us:</p>
+      <p>
+        <a class="button button--primary" href={deletionEmail} style="text-decoration: none;">
+          Email deletion request
+        </a>
+      </p>
+      <p>
+        Send from the email address associated with your Apple or Google account if possible. Include:
+      </p>
+      <ul>
+        <li>The sign-in method you use (Apple or Google)</li>
+        <li>The email address tied to that account, if known</li>
+        <li>Your household invite code, if you have one</li>
+        <li>Any other details that help us locate your account</li>
+      </ul>
+
+      <h3>What we delete</h3>
+      <p>When we process a valid account deletion request, we will delete:</p>
+      <ul>
+        <li>Your authentication account</li>
+        <li>Your profile (display name)</li>
+        <li>Your household membership association</li>
+      </ul>
+
+      <h3>What may remain</h3>
+      <ul>
+        <li>
+          <strong>Shared household data</strong> — If other parents remain in your household, shared
+          children, entries, and week history may be retained for them. Your display name on past
+          entries may appear as a historical record until those entries are removed.
+        </li>
+        <li>
+          <strong>Households you solely own</strong> — If you are the only member and owner of a
+          household, we will delete the household and its associated allowance data along with your
+          account, unless you ask us to transfer ownership first.
+        </li>
+        <li>
+          <strong>Backups and logs</strong> — Residual copies in encrypted backups or security logs
+          may persist for a limited period before automatic removal.
+        </li>
+      </ul>
+
+      <h3>Timeline</h3>
+      <p>
+        We aim to complete verified deletion requests within <strong>30 days</strong>. We may contact
+        you to confirm your identity before processing a request.
+      </p>
+
+      <h2>Sign out without deleting</h2>
+      <p>
+        Signing out from <strong>Household → Sign out</strong> ends your session on the device but
+        does not delete your cloud account or household data. Use the email request above for full
+        account deletion.
+      </p>
+
+      <h2>Questions</h2>
+      <p>
+        For privacy questions or help with deletion, contact
+        <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>. See also our
+        <a href="/privacy">Privacy Policy</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

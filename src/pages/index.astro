@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout title={site.name} description={site.description}>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__eyebrow">Coming soon to the App Store</span>
+        <h1>{site.tagline}</h1>
+        <p class="hero__lead">
+          Patch Fund helps parents track weekly allowance for each child — log entries in seconds,
+          review past weeks, and keep both parents in sync. Built for real life, including Siri.
+        </p>
+        <div class="hero__actions">
+          <span class="button button--primary" aria-disabled="true">App Store — coming soon</span>
+          <a class="button button--secondary" href={`mailto:${site.contactEmail}?subject=Patch%20Fund%20early%20access`}>
+            Request early access
+          </a>
+        </div>
+      </div>
+      <div class="hero__icon-wrap">
+        <img class="hero__icon" src="/icon.png" alt="Patch Fund app icon" width="280" height="280" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--muted" id="features">
+    <div class="container">
+      <div class="section__intro">
+        <h2>Everything you need for allowance week</h2>
+        <p>
+          A focused iOS app for parents — not a bank, not a chore chart. Just a clear balance,
+          a simple log, and history when you need it.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Current week at a glance</h3>
+          <p>
+            See each child's balance front and center. Log money in or out with a short note, edit
+            entries, or start a fresh week when allowance resets.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Household sync</h3>
+          <p>
+            Sign in and share a household with another parent. Children, entries, and week history
+            stay in sync in real time — with attribution so you know who logged what.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Log with Siri</h3>
+          <p>
+            Say "Patch Fund" and speak a natural entry like "add five dollars for mowing the lawn."
+            Review and save without hunting for the app.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Quick log suggestions</h3>
+          <p>
+            After a few entries, your most common amount-and-note combos appear as one-tap buttons
+            for the stuff you log every week.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Week history</h3>
+          <p>
+            Closed weeks are saved with starting allowance and ending balance. Tap into any week to
+            review its entries.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Works offline, too</h3>
+          <p>
+            Use Patch Fund on a single device without an account. Your data stays on that device
+            until you choose to enable household sync.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__intro">
+        <h2>Built for parents, private by design</h2>
+        <p>
+          Patch Fund is parent-facing. You enter information about your children to manage allowance
+          — the app is not directed at children. Read our policies anytime.
+        </p>
+      </div>
+      <ol class="steps">
+        <li>
+          <strong>Your data, your choice.</strong> Use local-only mode on one phone, or sign in to
+          sync a household through our cloud provider.
+        </li>
+        <li>
+          <strong>Clear policies.</strong> Privacy, terms, and step-by-step data deletion
+          instructions are always available on this site.
+        </li>
+        <li>
+          <strong>Questions welcome.</strong> Reach us at
+          <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> anytime.
+        </li>
+      </ol>
+    </div>
+  </section>
+</BaseLayout>

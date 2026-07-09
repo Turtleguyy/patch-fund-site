@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout
+  title="Terms of Service"
+  description="Terms governing your use of Patch Fund."
+  currentPath="/terms"
+>
+  <article class="legal-page">
+    <div class="container container--narrow">
+      <h1>Terms of Service</h1>
+      <p class="legal-page__meta">
+        Effective date: {site.lastUpdated}<br />
+        These Terms of Service ("Terms") govern your use of the Patch Fund mobile application and
+        this website, operated by {site.company} ("we," "us," or "our").
+      </p>
+
+      <p>
+        By downloading, accessing, or using Patch Fund, you agree to these Terms. If you do not
+        agree, do not use the app or this website.
+      </p>
+
+      <h2>About Patch Fund</h2>
+      <p>
+        Patch Fund is a parent-facing tool for tracking weekly allowance and related entries. It is
+        not a bank, payment processor, or financial institution. Balances shown in the app are for
+        informational and household record-keeping purposes only.
+      </p>
+
+      <h2>Eligibility</h2>
+      <p>
+        You must be at least 18 years old (or the age of majority where you live) to use Patch Fund.
+        The app is intended for parents or legal guardians. You are responsible for any information
+        you enter about children in your household.
+      </p>
+
+      <h2>Accounts and household sync</h2>
+      <ul>
+        <li>
+          Household sync requires signing in with Apple or Google. Each provider creates a separate
+          account; we do not link accounts across providers.
+        </li>
+        <li>
+          You are responsible for maintaining the security of your device and sign-in credentials.
+        </li>
+        <li>
+          When you join a household, other members of that household may see shared allowance data
+          according to the app's design.
+        </li>
+        <li>
+          You may sign out at any time. To delete cloud account data, follow the instructions on our
+          <a href="/delete-data">Delete your data</a> page.
+        </li>
+      </ul>
+
+      <h2>Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use Patch Fund for any unlawful purpose</li>
+        <li>Attempt to access another user's account or household without authorization</li>
+        <li>Interfere with or disrupt the app, servers, or networks</li>
+        <li>Reverse engineer or attempt to extract source code except where permitted by law</li>
+        <li>Misrepresent your identity or relationship to a household</li>
+      </ul>
+
+      <h2>Local-only mode</h2>
+      <p>
+        If you use Patch Fund without signing in, your data is stored on your device. We are not
+        responsible for loss of local data due to device failure, app deletion, or operating system
+        actions. You are responsible for backing up your device if you rely on local-only data.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>
+        Patch Fund integrates with third-party services such as Apple Sign In, Google Sign-In,
+        Supabase, and optionally OpenAI for Siri phrase parsing. Your use of those features is also
+        subject to the applicable third-party terms and policies. We are not responsible for
+        third-party services outside our reasonable control.
+      </p>
+
+      <h2>Intellectual property</h2>
+      <p>
+        Patch Fund, including its design, code, and branding, is owned by {site.company} or its
+        licensors and is protected by intellectual property laws. We grant you a limited,
+        non-exclusive, non-transferable license to use the app for personal, non-commercial
+        household purposes in accordance with these Terms.
+      </p>
+
+      <h2>Disclaimer of warranties</h2>
+      <p>
+        PATCH FUND IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER
+        EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+        PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED,
+        ERROR-FREE, OR ACCURATE.
+      </p>
+
+      <h2>Limitation of liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, {site.company.toUpperCase()} AND ITS OFFICERS,
+        DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+        CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM
+        YOUR USE OF PATCH FUND, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+      </p>
+      <p>
+        OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THESE TERMS OR PATCH FUND
+        WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID US FOR THE APP IN THE TWELVE MONTHS
+        BEFORE THE CLAIM, OR (B) USD $50.
+      </p>
+
+      <h2>Indemnification</h2>
+      <p>
+        You agree to indemnify and hold harmless {site.company} from claims, damages, and expenses
+        (including reasonable attorneys' fees) arising from your use of Patch Fund, your violation of
+        these Terms, or your violation of any third-party rights.
+      </p>
+
+      <h2>Termination</h2>
+      <p>
+        We may suspend or terminate access to Patch Fund at any time if we reasonably believe you
+        have violated these Terms or if required for legal or security reasons. You may stop using
+        the app at any time. Sections that by their nature should survive termination will survive.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        We may update these Terms from time to time. We will post the updated Terms on this page and
+        update the effective date above. Material changes will be effective when posted unless
+        otherwise stated. Continued use after changes become effective constitutes acceptance.
+      </p>
+
+      <h2>Governing law</h2>
+      <p>
+        These Terms are governed by the laws of the United States and the state in which {site.company}
+        is organized, without regard to conflict-of-law principles. Any dispute arising from these
+        Terms or Patch Fund will be resolved in the courts located in that state, unless applicable
+        law requires otherwise.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these Terms? Contact us at
+        <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

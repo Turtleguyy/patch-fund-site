@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="How Patch Fund collects, uses, and protects your information."
+  currentPath="/privacy"
+>
+  <article class="legal-page">
+    <div class="container container--narrow">
+      <h1>Privacy Policy</h1>
+      <p class="legal-page__meta">
+        Effective date: {site.lastUpdated}<br />
+        {site.company} ("we," "us," or "our") operates the Patch Fund mobile application and this
+        website ({site.url}).
+      </p>
+
+      <p>
+        This Privacy Policy explains what information we collect when you use Patch Fund, how we use
+        it, and the choices you have. Patch Fund is a parent-facing allowance tracker. The app is not
+        directed at children; parents enter information about their children to manage household
+        allowance.
+      </p>
+
+      <h2>Information we collect</h2>
+
+      <h3>Information you provide</h3>
+      <ul>
+        <li>
+          <strong>Account information</strong> — If you enable household sync, you may sign in with
+          Apple or Google. We receive account identifiers and, when provided by the sign-in provider,
+          your name and email address.
+        </li>
+        <li>
+          <strong>Profile information</strong> — Your display name, shown on entries you log when
+          household sync is enabled.
+        </li>
+        <li>
+          <strong>Household and allowance data</strong> — Children's first names (or nicknames),
+          weekly starting allowance amounts, ledger entries (amount, reason, date), and closed week
+          summaries.
+        </li>
+        <li>
+          <strong>Voice and Siri input</strong> — If you use Siri shortcuts, spoken phrases are
+          processed to create allowance entries. Depending on your configuration, parsing may occur
+          on your device or through a third-party language model (see below).
+        </li>
+        <li>
+          <strong>Support communications</strong> — Information you send us by email, such as your
+          email address and the content of your message.
+        </li>
+      </ul>
+
+      <h3>Information collected automatically</h3>
+      <ul>
+        <li>
+          <strong>Device-stored data</strong> — When you use Patch Fund without signing in, allowance
+          data is stored locally on your device.
+        </li>
+        <li>
+          <strong>Sync and session data</strong> — When signed in, authentication tokens and synced
+          household data are transmitted between your device and our backend to keep accounts and
+          households up to date.
+        </li>
+      </ul>
+
+      <p>
+        We do not use third-party advertising networks, and we do not sell your personal
+        information.
+      </p>
+
+      <h2>How we use information</h2>
+      <p>We use the information described above to:</p>
+      <ul>
+        <li>Provide allowance tracking, history, and household sync features</li>
+        <li>Authenticate you and associate data with the correct household</li>
+        <li>Attribute entries to the parent who logged them in shared households</li>
+        <li>Parse Siri voice input into allowance entries when you use voice shortcuts</li>
+        <li>Respond to support requests and legal or safety obligations</li>
+        <li>Improve reliability and security of the app and services</li>
+      </ul>
+
+      <h2>How we store information</h2>
+      <ul>
+        <li>
+          <strong>Local-only mode</strong> — If you do not sign in, your allowance data remains on
+          your device. We do not receive it.
+        </li>
+        <li>
+          <strong>Household sync</strong> — If you sign in, household data is stored in a cloud
+          database hosted by Supabase, Inc. Data is protected by access controls so household members
+          can access only their own household's information.
+        </li>
+      </ul>
+
+      <h2>Third-party services</h2>
+      <p>Depending on how you use Patch Fund, data may be processed by:</p>
+      <ul>
+        <li>
+          <strong>Apple</strong> — Sign in with Apple and Siri/App Intents on iOS (<a
+            href="https://www.apple.com/legal/privacy/"
+            >Apple Privacy Policy</a
+          >).
+        </li>
+        <li>
+          <strong>Google</strong> — Google Sign-In when you choose that option (<a
+            href="https://policies.google.com/privacy"
+            >Google Privacy Policy</a
+          >).
+        </li>
+        <li>
+          <strong>Supabase</strong> — Authentication and cloud database for household sync (<a
+            href="https://supabase.com/privacy"
+            >Supabase Privacy Policy</a
+          >).
+        </li>
+        <li>
+          <strong>OpenAI</strong> — Optional natural-language parsing of Siri phrases when an API
+          key is configured for your build. If enabled, the spoken phrase you provide may be sent to
+          OpenAI for parsing (<a href="https://openai.com/policies/privacy-policy"
+            >OpenAI Privacy Policy</a
+          >). When not enabled, parsing uses on-device rules instead.
+        </li>
+      </ul>
+      <p>
+        These providers process data according to their own policies and our agreements with them, as
+        applicable.
+      </p>
+
+      <h2>Data retention</h2>
+      <ul>
+        <li>
+          Local-only data remains on your device until you delete it, delete the app, or remove the
+          app's data from your device.
+        </li>
+        <li>
+          Cloud account and household data are retained while your account is active. You may request
+          deletion as described on our <a href="/delete-data">Delete your data</a> page.
+        </li>
+        <li>
+          We may retain limited information as required by law or for legitimate business purposes
+          such as resolving disputes or enforcing our terms.
+        </li>
+      </ul>
+
+      <h2>Your choices and rights</h2>
+      <ul>
+        <li>
+          Use Patch Fund without an account to keep data on your device only.
+        </li>
+        <li>Sign out at any time from the Household tab when using household sync.</li>
+        <li>
+          Request access to or deletion of cloud account data — see <a href="/delete-data"
+            >Delete your data</a
+          >.
+        </li>
+        <li>
+          Contact us at <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> with privacy
+          questions or requests.
+        </li>
+      </ul>
+      <p>
+        Depending on where you live, you may have additional rights under applicable privacy laws
+        (for example, to access, correct, or delete personal information). We will honor applicable
+        legal requests.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        We use reasonable technical and organizational measures to protect information, including
+        encrypted transport (HTTPS/TLS) and database access controls. No method of transmission or
+        storage is completely secure.
+      </p>
+
+      <h2>International users</h2>
+      <p>
+        If you use household sync, your information may be stored and processed in the United States
+        or other countries where our service providers operate. By using those features, you consent
+        to this transfer where permitted by law.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will post the updated policy on this
+        page and update the effective date above. Continued use of Patch Fund after changes become
+        effective constitutes acceptance of the revised policy.
+      </p>
+
+      <h2>Contact us</h2>
+      <p>
+        {site.company}<br />
+        Email: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><br />
+        Website: <a href={site.url}>{site.url}</a>
+      </p>
+    </div>
+  </article>
+</BaseLayout>
