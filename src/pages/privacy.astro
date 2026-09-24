@@ -30,8 +30,8 @@ import { site } from '../config/site';
       <ul>
         <li>
           <strong>Account information</strong> — If you enable household sync, you may sign in with
-          Apple or Google. We receive account identifiers and, when provided by the sign-in provider,
-          your name and email address.
+          Apple, Google, or Facebook. We receive account identifiers and, when provided by the
+          sign-in provider, your name and email address.
         </li>
         <li>
           <strong>Profile information</strong> — Your display name, shown on entries you log when
@@ -41,11 +41,6 @@ import { site } from '../config/site';
           <strong>Household and allowance data</strong> — Children's first names (or nicknames),
           weekly starting allowance amounts, ledger entries (amount, reason, date), and closed week
           summaries.
-        </li>
-        <li>
-          <strong>Voice and Siri input</strong> — If you use Siri shortcuts, spoken phrases are
-          processed to create allowance entries. Depending on your configuration, parsing may occur
-          on your device or through a third-party language model (see below).
         </li>
         <li>
           <strong>Support communications</strong> — Information you send us by email, such as your
@@ -77,7 +72,6 @@ import { site } from '../config/site';
         <li>Provide allowance tracking, history, and household sync features</li>
         <li>Authenticate you and associate data with the correct household</li>
         <li>Attribute entries to the parent who logged them in shared households</li>
-        <li>Parse Siri voice input into allowance entries when you use voice shortcuts</li>
         <li>Respond to support requests and legal or safety obligations</li>
         <li>Improve reliability and security of the app and services</li>
       </ul>
@@ -99,7 +93,7 @@ import { site } from '../config/site';
       <p>Depending on how you use Patch Fund, data may be processed by:</p>
       <ul>
         <li>
-          <strong>Apple</strong> — Sign in with Apple and Siri/App Intents on iOS (<a
+          <strong>Apple</strong> — Sign in with Apple (<a
             href="https://www.apple.com/legal/privacy/"
             >Apple Privacy Policy</a
           >).
@@ -111,17 +105,16 @@ import { site } from '../config/site';
           >).
         </li>
         <li>
+          <strong>Facebook</strong> — Facebook Login when you choose that option (<a
+            href="https://www.facebook.com/privacy/policy/"
+            >Meta Privacy Policy</a
+          >).
+        </li>
+        <li>
           <strong>Supabase</strong> — Authentication and cloud database for household sync (<a
             href="https://supabase.com/privacy"
             >Supabase Privacy Policy</a
           >).
-        </li>
-        <li>
-          <strong>OpenAI</strong> — Optional natural-language parsing of Siri phrases when an API
-          key is configured for your build. If enabled, the spoken phrase you provide may be sent to
-          OpenAI for parsing (<a href="https://openai.com/policies/privacy-policy"
-            >OpenAI Privacy Policy</a
-          >). When not enabled, parsing uses on-device rules instead.
         </li>
       </ul>
       <p>

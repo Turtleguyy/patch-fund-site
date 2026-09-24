@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../config/site';
 
 const deletionEmail = `mailto:${site.contactEmail}?subject=${encodeURIComponent('Patch Fund account deletion request')}&body=${encodeURIComponent(
-  'Please delete my Patch Fund account and associated cloud data.\n\nSign-in email (if known):\n\nApple or Google sign-in:\n\nHousehold invite code (if known):\n\nAdditional notes:\n',
+  'Please delete my Patch Fund account and associated cloud data.\n\nSign-in email (if known):\n\nApple, Google, or Facebook sign-in:\n\nHousehold invite code (if known):\n\nAdditional notes:\n',
 )}`;
 ---
 
@@ -22,7 +22,8 @@ const deletionEmail = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
 
       <p>
         How you delete data depends on whether you use Patch Fund in <strong>local-only mode</strong>
-        (no sign-in) or with <strong>household sync</strong> (signed in with Apple or Google).
+        (no sign-in) or with <strong>household sync</strong> (signed in with Apple, Google, or
+        Facebook).
       </p>
 
       <h2>Local-only mode (no account)</h2>
@@ -45,7 +46,7 @@ const deletionEmail = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
 
       <h2>Household sync (signed in)</h2>
       <p>
-        If you signed in with Apple or Google, your profile and household membership are stored in our
+        If you signed in with Apple, Google, or Facebook, your profile and household membership are stored in our
         cloud backend. You can delete individual children, entries, and week summaries inside the app,
         but that does not delete your account.
       </p>
@@ -58,10 +59,10 @@ const deletionEmail = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
         </a>
       </p>
       <p>
-        Send from the email address associated with your Apple or Google account if possible. Include:
+        Send from the email address associated with your Apple, Google, or Facebook account if possible. Include:
       </p>
       <ul>
-        <li>The sign-in method you use (Apple or Google)</li>
+        <li>The sign-in method you use (Apple, Google, or Facebook)</li>
         <li>The email address tied to that account, if known</li>
         <li>Your household invite code, if you have one</li>
         <li>Any other details that help us locate your account</li>

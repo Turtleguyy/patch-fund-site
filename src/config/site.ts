@@ -6,5 +6,5 @@ export const site = {
   url: 'https://patchfund.app',
   company: 'Nicoll LTD Co',
   contactEmail: 'contact@nicoll.co',
-  lastUpdated: 'July 9, 2026',
+  lastUpdated: 'September 24, 2026',
 } as const;

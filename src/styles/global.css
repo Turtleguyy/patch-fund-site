@@ -316,16 +316,22 @@ li + li {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
 }
 
 .feature-card {
+  grid-column: span 2;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
   box-shadow: var(--shadow-sm);
+}
+
+.feature-card:nth-child(3n + 1):nth-last-child(2),
+.feature-card:nth-child(3n + 2):nth-last-child(1) {
+  grid-column: span 3;
 }
 
 .feature-card h3 {
@@ -406,6 +412,12 @@ li + li {
   .feature-grid,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .feature-card:nth-child(3n + 1):nth-last-child(2),
+  .feature-card:nth-child(3n + 2):nth-last-child(1) {
+    grid-column: auto;
   }
 
   .hero {
